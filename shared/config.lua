@@ -36,6 +36,9 @@ Config.RegisterCreatedWeapons = true
 -- "LegacyFuel", "lj-fuel", "ps-fuel"
 Config.Fuel = "ps-fuel"
 
+-- Radio Click when toggling duty. "true" or "false"
+Config.Surround = true
+
 -- Google Docs Link
 Config.sopLink = {
     ['police'] = '',
@@ -797,3 +800,4 @@ function GetJobType(job)
 		return nil
 	end
 end
+

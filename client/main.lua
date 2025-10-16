@@ -776,6 +776,10 @@ end)
 RegisterNUICallback("toggleDuty", function(data, cb)
     TriggerServerEvent('QBCore:ToggleDuty')
     TriggerServerEvent('ps-mdt:server:ClockSystem')
+
+	local coords = GetEntityCoords(PlayerPedId())
+    exports['mx-surround']:Play(nil, '/ui/sounds/radioclick.ogg', coords, false, 1.0)
+		
     cb(true)
 end)
 
@@ -1118,3 +1122,4 @@ if Config.UseWolfknightRadar == true then
         end
     end)
 end
+

@@ -1,5 +1,14 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
+local CodeID = {
+	codeName = 'ps-mdt',
+	version = '2.7.3'
+}
+
+CreateThread(function()
+	print('[' .. CodeID.codeName .. '] v' .. CodeID.version .. ' startet!')
+end)
+
 function GetPlayerData(source)
 	local Player = QBCore.Functions.GetPlayer(source)
 	if Player == nil then return end -- Player not loaded in correctly
@@ -50,3 +59,4 @@ end
 function GetNameFromPlayerData(PlayerData)
 	return ('%s %s'):format(PlayerData.charinfo.firstname, PlayerData.charinfo.lastname)
 end
+
